@@ -725,70 +725,85 @@ recipes:
     name: Repair Factory
     production_time: 60s
     input:
-      eye of ender:
-        material: EYE_OF_ENDER 
-        lore:
-         - Essence
-        enchants:
-          dura:
-            enchant: DURABILITY
-        amount: 1
+#      eye of ender:
+#        material: EYE_OF_ENDER 
+#        lore:
+#         - Essence
+#        enchants:
+#          dura:
+#            enchant: DURABILITY
+#        amount: 1
+       emerald:
+         material: EMERALD
+         amount: 1
     health_gained: 1500
   Repair_Small_Factory:
     type: REPAIR
     name: Repair Factory
     production_time: 30s
     input:
-      eye of ender:
-        material: EYE_OF_ENDER 
-        lore:
-         - Essence
-        enchants:
-          dura:
-            enchant: DURABILITY
-        amount: 1
+#      eye of ender:
+#        material: EYE_OF_ENDER 
+#        lore:
+#         - Essence
+#        enchants:
+#          dura:
+#            enchant: DURABILITY
+#        amount: 1
+       emerald:
+         material: EMERALD
+         amount: 3
     health_gained: 800
   Repair_Factory:
     type: REPAIR
     name: Repair Factory
     production_time: 30s
     input:
-      eye of ender:
-        material: EYE_OF_ENDER 
-        lore:
-         - Essence
-        enchants:
-          dura:
-            enchant: DURABILITY
-        amount: 1
+#      eye of ender:
+#        material: EYE_OF_ENDER 
+#        lore:
+#         - Essence
+#        enchants:
+#          dura:
+#            enchant: DURABILITY
+#        amount: 1
+       emeraldblock:
+         material: EMERALD_BLOCK
+         amount: 1
     health_gained: 350
   Repair_Advanced_Factory:
     type: REPAIR
     name: Repair Advanced Factory
     production_time: 15s
     input:
-      eye of ender:
-        material: EYE_OF_ENDER
-        lore:
-         - Essence
-        enchants:
-          dura:
-            enchant: DURABILITY        
-        amount: 1
+#      eye of ender:
+#        material: EYE_OF_ENDER 
+#        lore:
+#         - Essence
+#        enchants:
+#          dura:
+#            enchant: DURABILITY
+#        amount: 1
+       emeraldblock:
+         material: EMERALD_BLOCK
+         amount: 3
     health_gained: 225
   Repair_Expert_Factory:
     type: REPAIR
     name: Repair Advanced Factory
     production_time: 10s
     input:
-      eye of ender:
-        material: EYE_OF_ENDER 
-        lore:
-         - Essence
-        enchants:
-          dura:
-            enchant: DURABILITY
-        amount: 1
+#      eye of ender:
+#        material: EYE_OF_ENDER 
+#        lore:
+#         - Essence
+#        enchants:
+#          dura:
+#            enchant: DURABILITY
+#        amount: 1
+       emeraldblock:
+         material: EMERALD_BLOCK
+         amount: 5
     health_gained: 65
   Bake_Bread_Advanced:
     type: PRODUCTION
