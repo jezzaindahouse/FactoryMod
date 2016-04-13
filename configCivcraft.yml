@@ -6246,7 +6246,7 @@ recipes:
     input:
       wheat:
         material: WHEAT
-        amount: 64
+        amount: 128
       logs:
         material: LOG
         amount: 128
@@ -6274,7 +6274,7 @@ recipes:
     input:
       carrots:
         material: CARROT_ITEM
-        amount: 64
+        amount: 128
       logs:
         material: LOG
         amount: 128
@@ -6302,7 +6302,7 @@ recipes:
     input:
       potatoes:
         material: POTATO_ITEM
-        amount: 64
+        amount: 128
       logs:
         material: LOG
         amount: 128
@@ -6331,7 +6331,7 @@ recipes:
     input:
       wheat:
         material: WHEAT
-        amount: 320
+        amount: 640
       acacialogs:
         material: LOG_2
         amount: 640
@@ -6365,7 +6365,7 @@ recipes:
     input:
       carrots:
         material: CARROT_ITEM
-        amount: 320
+        amount: 640
       sprucelogs:
         material: LOG
         amount: 640
@@ -6400,7 +6400,7 @@ recipes:
     input:
       potatoes:
         material: POTATO_ITEM
-        amount: 320
+        amount: 640
       birchlogs:
         material: LOG
         amount: 640
@@ -6440,7 +6440,7 @@ recipes:
          - Compacted Item
       acacialogs:
         material: LOG_2
-        amount: 50
+        amount: 18
         durability: 0
         lore:
          - Compacted Item
@@ -6496,7 +6496,7 @@ recipes:
          - Compacted Item
       sprucelogs:
         material: LOG
-        amount: 50
+        amount: 24
         durability: 1
         lore:
          - Compacted Item
@@ -6554,7 +6554,7 @@ recipes:
          - Compacted Item
       birchlogs:
         material: LOG
-        amount: 50
+        amount: 24
         durability: 2
         lore:
          - Compacted Item
