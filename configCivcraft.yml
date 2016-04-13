@@ -6468,9 +6468,7 @@ recipes:
         amount: 64
       apples:
         material: APPLE
-        amount: 1
-        lore:
-         - Compacted Item
+        amount: 32
       aether:
         material: GOLD_NUGGET
         amount: 960
