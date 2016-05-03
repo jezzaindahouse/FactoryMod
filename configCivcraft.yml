@@ -6866,7 +6866,7 @@ recipes:
          - Compacted Item
       acacialogs:
         material: LOG_2
-        amount: 3
+        amount: 6
         durability: 0
         lore:
          - Compacted Item
@@ -6920,7 +6920,7 @@ recipes:
          - Compacted Item
       sprucelogs:
         material: LOG
-        amount: 3
+        amount: 6
         durability: 1
         lore:
          - Compacted Item
@@ -6976,7 +6976,7 @@ recipes:
          - Compacted Item
       birchlogs:
         material: LOG
-        amount: 3
+        amount: 6
         durability: 2
         lore:
          - Compacted Item
