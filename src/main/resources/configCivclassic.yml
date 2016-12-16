@@ -35,6 +35,7 @@ factories:
      - upgrade_to_wool_dye
      - upgrade_to_glass_dye
      - upgrade_to_clay_dye
+     - upgrade_to_bio_lab
      - repair_basic_factory
   stone_smelter:
     type: FCCUPGRADE
@@ -211,6 +212,20 @@ factories:
      - make_diamond_axe
      - make_diamond_hoe
      - repair_diamond_factory
+  bio_lab:
+    type: FCCUPGRADE
+    name: Bio Lab
+    citadelBreakReduction: 1.0
+    recipes:
+     - dirt_to_grass
+     - dirt_to_podzol
+     - dirt_to_mycelium
+     - sapling_to_oak
+     - sapling_to_spruce
+     - sapling_to_birch
+     - sapling_to_jungle
+     - sapling_to_acacia
+     - sapling_to_dark_oak
 recipes:
   repair_basic_factory:
     type: REPAIR
@@ -1022,6 +1037,139 @@ recipes:
          - It will also block pearls when they land
          - As well as stop elytra
         amount: 12
+  upgrade_to_bio_lab:
+    production_time: 10s
+    name: Upgrade to Bio Lab
+    type: UPGRADE
+    input:
+      sapling:
+        material: SAPLING
+        amount: 32
+      Dirt!:
+        material: DIRT
+        amount: 256
+        name: Dirt!
+    factory: Bio Lab
+  dirt_to_grass:
+    production_time: 10s
+    name: Convert Dirt to Grass
+    type: PRODUCTION
+    input:
+      dirt:
+        material: DIRT
+        amount: 64
+    output:
+      grass:
+        material: GRASS
+        amount: 64
+  dirt_to_podzol:
+    production_time: 10s
+    name: Convert Dirt to Podzol
+    type: PRODUCTION
+    input:
+      dirt:
+        material: DIRT
+        amount: 64
+    output:
+      podzol:
+        material: DIRT
+        amount: 64
+        durability: 2
+  dirt_to_mycelium:
+    production_time: 10s
+    name: Convert Dirt to Mycelium
+    type: PRODUCTION
+    input:
+      dirt:
+        material: DIRT
+        amount: 64
+    output:
+      mycelium:
+        material: MYCEL
+        amount: 64
+  sapling_to_oak:
+    production_time: 10s
+    name: Convert Sapling to Oak
+    type: PRODUCTION
+    input:
+      sapling:
+        material: SAPLING
+        amount: 32
+        durability: -1
+    output:
+      oak_sapling:
+        material: SAPLING
+        amount: 32
+  sapling_to_spruce:
+    production_time: 10s
+    name: Convert Sapling to Spruce
+    type: PRODUCTION
+    input:
+      sapling:
+        material: SAPLING
+        amount: 32
+        durability: -1
+    output:
+      spruce_sapling:
+        material: SAPLING
+        amount: 32
+        durability: 1
+  sapling_to_birch:
+    production_time: 10s
+    name: Convert Sapling to Birch
+    type: PRODUCTION
+    input:
+      sapling:
+        material: SAPLING
+        amount: 32
+        durability: -1
+    output:
+      birch_sapling:
+        material: SAPLING
+        amount: 32
+        durability: 2
+  sapling_to_jungle:
+    production_time: 10s
+    name: Convert Sapling to Jungle
+    type: PRODUCTION
+    input:
+      sapling:
+        material: SAPLING
+        amount: 32
+        durability: -1
+    output:
+      jungle_sapling:
+        material: SAPLING
+        amount: 32
+        durability: 3
+  sapling_to_acacia:
+    production_time: 10s
+    name: Convert Sapling to Acacia
+    type: PRODUCTION
+    input:
+      sapling:
+        material: SAPLING
+        amount: 32
+        durability: -1
+    output:
+      acacia_sapling:
+        material: SAPLING
+        amount: 32
+        durability: 4
+  sapling_to_dark_oak:
+    production_time: 10s
+    name: Convert Sapling to Dark Oak
+    type: PRODUCTION
+    input:
+      sapling:
+        material: SAPLING
+        amount: 32
+        durability: -1
+    output:
+      dark_oak_sapling:
+        material: SAPLING
+        amount: 32
+        durability: 5
   dye_clay_white:
     production_time: 5s
     name: Dye Clay White
