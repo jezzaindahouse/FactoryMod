@@ -36,7 +36,7 @@ factories:
      - upgrade_to_glass_dye
      - upgrade_to_clay_dye
      - upgrade_to_bio_lab
-     - repair_basic_factory
+     - repair_dirt_factory
   stone_smelter:
     type: FCCUPGRADE
     name: Basic Smelter
@@ -47,7 +47,7 @@ factories:
      - smelt_netherrack
      - upgrade_to_ore_smelter
      - upgrade_to_advanced_smelter
-     - repair_basic_factory
+     - repair_stone_smelter
   charcoal_factory:
     type: FCCUPGRADE
     name: Charcoal Maker
@@ -56,6 +56,7 @@ factories:
      - charcoal_from_logs
      - charcoal_from_logs_2
      - charcoal_from_coal
+     - repair_charcoal_factory
   aesthetics:
     type: FCCUPGRADE
     name: Aesthetics Factory
@@ -68,7 +69,7 @@ factories:
      - make_quartz
      - make_red_sand
      - make_purpur
-     - repair_basic_factory
+     - repair_aesthetics
   dye_wool:
     type: FCCUPGRADE
     name: Wool Dying Factory
@@ -90,6 +91,7 @@ factories:
      - dye_wool_green
      - dye_wool_red
      - dye_wool_black
+     - repair_wool
   dye_clay:
     type: FCCUPGRADE
     name: Clay Dying Factory
@@ -111,6 +113,7 @@ factories:
      - dye_clay_green
      - dye_clay_red
      - dye_clay_black
+     - repair_clay
   dye_glass:
     type: FCCUPGRADE
     name: Glass Dying Factory
@@ -132,6 +135,7 @@ factories:
      - dye_glass_green
      - dye_glass_red
      - dye_glass_black
+     - repair_glass
   grill:
     type: FCCUPGRADE
     name: Grill
@@ -144,7 +148,7 @@ factories:
      - cook_rabbit
      - cook_fish
      - cook_salmon
-     - repair_basic_factory
+     - repair_grill
   bakery:
     type: FCCUPGRADE
     name: Bakery
@@ -152,7 +156,7 @@ factories:
     recipes:
      - bake_bread
      - bake_potatoes
-     - repair_basic_factory
+     - repair_bakery
   ore_smelter:
     type: FCCUPGRADE
     name: Ore Smelter
@@ -167,7 +171,7 @@ factories:
      - smelt_lapis_ore
      - make_bastion_basic
      - upgrade_to_advanced_ore_smelter
-     - repair_basic_factory
+     - repair_ore_smelter
   advanced_ore_smelter:
     type: FCCUPGRADE
     name: Advanced Ore Smelter
@@ -190,7 +194,7 @@ factories:
      - smelt_stone_advanced
      - smelt_glass_advanced
      - smelt_netherrack_advanced
-     - repair_basic_factory
+     - repair_advanced_smelter
   diamond_armor:
     type: FCCUPGRADE
     name: Diamond Armor Smith
@@ -226,6 +230,7 @@ factories:
      - sapling_to_jungle
      - sapling_to_acacia
      - sapling_to_dark_oak
+     - repair_bio_lab
 recipes:
   repair_basic_factory:
     type: REPAIR
@@ -917,7 +922,7 @@ recipes:
     input:
       diamond:
         material: DIAMOND
-        amount: 1
+        amount: 8
     health_gained: 100
   smelt_coal_advanced:
     production_time: 10s
@@ -2018,3 +2023,115 @@ recipes:
         material: STAINED_GLASS
         durability: 15
         amount: 64
+  repair_dirt_factory:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      Dirt!:
+        material: DIRT
+        name: Dirt!
+        amount: 1
+    health_gained: 1000
+  repair_stone_smelter:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      stone:
+        material: STONE
+        amount: 16
+    health_gained: 100
+  repair_charcoal_factory:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      charcoal:
+        material: COAL
+        durability: 1
+        amount: 16
+    health_gained: 100
+  repair_aesthetics:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      stone:
+        material: STONE
+        amount: 16
+    health_gained: 100
+  repair_wool:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      wool:
+        material: WOOL
+        durability: -1
+        amount: 16
+    health_gained: 100
+  repair_clay:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      clay:
+        material: HARD_CLAY
+        durability: -1
+        amount: 16
+    health_gained: 100
+  repair_glass:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      glass:
+        material: GLASS
+        amount: 16
+    health_gained: 100
+  repair_grill:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 4
+    health_gained: 100
+  repair_bakery:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      brick:
+        material: CLAY_BRICK
+        amount:16
+    health_gained: 100
+  repair_ore_smelter:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 8
+    health_gained: 100
+  repair_advanced_smelter:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      stone:
+        material: STONE
+        amount: 32
+    health_gained: 100
+  repair_bio_lab:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      Dirt!:
+        material: DIRT
+        amount: 8
+    health_gained: 100
