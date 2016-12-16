@@ -2106,7 +2106,7 @@ recipes:
     input:
       brick:
         material: CLAY_BRICK
-        amount:16
+        amount: 16
     health_gained: 100
   repair_ore_smelter:
     production_time: 10s
