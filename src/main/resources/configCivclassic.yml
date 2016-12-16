@@ -709,9 +709,10 @@ recipes:
         material: STONE
         amount: 64
         durability: -1
-      dye:
+      bonemeal:
         material: INK_SACK
         durability: 15
+        amount: 8
     output:
       quartz:
         material: QUARTZ_BLOCK
@@ -741,7 +742,7 @@ recipes:
         material: STONE
         amount: 64
         durability: -1
-      dye:
+      purple_dye:
         material: INK_SACK
         amount: 8
         durability: 5
