@@ -1,0 +1,1824 @@
+default_update_time: 1s
+default_fuel:
+  charcoal:
+    material: COAL
+    durability: 1
+default_fuel_consumption_intervall: 2s
+default_menu_factory: Dirt Factory
+default_return_rate: 0.5
+break_grace_period: 1000d
+decay_intervall: 1h
+decay_amount: 21
+default_health: 1000
+disable_nether: false
+use_recipe_yamlidentifiers: true
+log_inventories: true
+
+factories:
+  dirt_factory:
+    type: FCC
+    name: Dirt Factory
+    citadelBreakReduction: 1.0
+    setupcost:
+      Dirt:
+        material: DIRT
+        amount: 1
+    recipes:
+     - dirt
+     - upgrade_to_stone_smelter
+     - upgrade_to_aesthetics
+     - upgrade_to_bakery
+     - upgrade_to_grill
+     - upgrade_to_charcoal_maker
+     - upgrade_to_diamond_armor_smith
+     - upgrade_to_diamond_tool_smith
+     - upgrade_to_wool_dye
+     - upgrade_to_glass_dye
+     - upgrade_to_clay_dye
+     - repair_basic_factory
+  stone_smelter:
+    type: FCCUPGRADE
+    name: Basic Smelter
+    citadelBreakReduction: 1.0
+    recipes:
+     - smelt_stone
+     - smelt_glass
+     - smelt_netherrack
+     - upgrade_to_ore_smelter
+     - upgrade_to_advanced_smelter
+     - repair_basic_factory
+  charcoal_factory:
+    type: FCCUPGRADE
+    name: Charcoal Maker
+    citadelBreakReduction: 1.0
+    recipes:
+     - charcoal_from_logs
+     - charcoal_from_logs_2
+     - charcoal_from_coal
+  aesthetics:
+    type: FCCUPGRADE
+    name: Aesthetics Factory
+    citadelBreakReduction: 1.0
+    recipes:
+     - make_cracked_stone_brick
+     - make_mossy_stone_brick
+     - make_circle_stone_brick
+     - make_mossy_cobble
+     - make_quartz
+     - make_red_sand
+     - make_purpur
+     - repair_basic_factory
+  dye_wool:
+    type: FCCUPGRADE
+    name: Wool Dying Factory
+    citadelBreakReduction: 1.0
+    recipes:
+     - dye_wool_white
+     - dye_wool_orange
+     - dye_wool_magenta
+     - dye_wool_light_blue
+     - dye_wool_yellow
+     - dye_wool_lime
+     - dye_wool_pink
+     - dye_wool_gray
+     - dye_wool_light_gray
+     - dye_wool_cyan
+     - dye_wool_purple
+     - dye_wool_blue
+     - dye_wool_brown
+     - dye_wool_green
+     - dye_wool_red
+     - dye_wool_black
+  dye_clay:
+    type: FCCUPGRADE
+    name: Clay Dying Factory
+    citadelBreakReduction: 1.0
+    recipes:
+     - dye_clay_white
+     - dye_clay_orange
+     - dye_clay_magenta
+     - dye_clay_light_blue
+     - dye_clay_yellow
+     - dye_clay_lime
+     - dye_clay_pink
+     - dye_clay_gray
+     - dye_clay_light_gray
+     - dye_clay_cyan
+     - dye_clay_purple
+     - dye_clay_blue
+     - dye_clay_brown
+     - dye_clay_green
+     - dye_clay_red
+     - dye_clay_black
+  dye_glass:
+    type: FCCUPGRADE
+    name: Glass Dying Factory
+    citadelBreakReduction: 1.0
+    recipes:
+     - dye_glass_white
+     - dye_glass_orange
+     - dye_glass_magenta
+     - dye_glass_light_blue
+     - dye_glass_yellow
+     - dye_glass_lime
+     - dye_glass_pink
+     - dye_glass_gray
+     - dye_glass_light_gray
+     - dye_glass_cyan
+     - dye_glass_purple
+     - dye_glass_blue
+     - dye_glass_brown
+     - dye_glass_green
+     - dye_glass_red
+     - dye_glass_black
+  grill:
+    type: FCCUPGRADE
+    name: Grill
+    citadelBreakReduction: 1.0
+    recipes:
+     - cook_beef
+     - cook_pork
+     - cook_chicken
+     - cook_mutton
+     - cook_rabbit
+     - cook_fish
+     - cook_salmon
+     - repair_basic_factory
+  bakery:
+    type: FCCUPGRADE
+    name: Bakery
+    citadelBreakReduction: 1.0
+    recipes:
+     - bake_bread
+     - bake_potatoes
+     - repair_basic_factory
+  ore_smelter:
+    type: FCCUPGRADE
+    name: Ore Smelter
+    citadelBreakReduction: 1.0
+    recipes:
+     - smelt_stone_advanced
+     - smelt_coal_ore
+     - smelt_iron_ore
+     - smelt_diamond_ore
+     - smelt_gold_ore
+     - smelt_redstone_ore
+     - smelt_lapis_ore
+     - upgrade_to_advanced_ore_smelter
+     - repair_basic_factory
+  advanced_ore_smelter:
+    type: FCCUPGRADE
+    name: Advanced Ore Smelter
+    citadelBreakReduction: 0.8
+    recipes:
+     - smelt_stone_advanced
+     - smelt_coal_advanced
+     - smelt_iron_advanced
+     - smelt_diamond_advanced
+     - smelt_gold_advanced
+     - smelt_redstone_advanced
+     - smelt_lapis_advanced
+     - repair_diamond_factory
+  advanced_smelter:
+    type: FCCUPGRADE
+    name: Advanced Smelter
+    citadelBreakReduction: 1.0
+    recipes:
+     - smelt_stone_advanced
+     - smelt_glass_advanced
+     - smelt_netherrack_advanced
+     - repair_basic_factory
+  diamond_armor:
+    type: FCCUPGRADE
+    name: Diamond Armor Smith
+    citadelBreakReduction: 1.0
+    recipes:
+     - make_diamond_helm
+     - make_diamond_chest
+     - make_diamond_legs
+     - make_diamond_boots
+     - repair_diamond_factory
+  diamond_tools:
+    type: FCCUPGRADE
+    name: Diamond Tool Smith
+    citadelBreakReduction: 1.0
+    recipes:
+     - make_diamond_pick
+     - make_diamond_sword
+     - make_diamond_shovel
+     - make_diamond_axe
+     - make_diamond_hoe
+     - repair_diamond_factory
+recipes:
+  repair_basic_factory:
+    type: REPAIR
+    name: Repair Factory
+    production_time: 5s
+    input:
+      redstone_block:
+        material: REDSTONE_BLOCK
+        amount: 1
+    health_gained: 100
+  smelt_stone:
+    production_time: 10s
+    name: Smelt Stone
+    type: PRODUCTION
+    input:
+      cobblestone:
+        material: COBBLESTONE
+        amount: 64
+    output:
+      stone:
+        material: STONE
+        amount: 80
+  cook_beef:
+    production_time: 10s
+    name: Cook Beef
+    type: PRODUCTION
+    input:
+      raw_beef:
+        material: RAW_BEEF
+        amount: 32
+    output:
+      cooked_beef:
+        material: COOKED_BEEF
+        amount: 48
+  cook_chicken:
+    production_time: 10s
+    name: Cook Chicken
+    type: PRODUCTION
+    input:
+      raw_chicken:
+        material: RAW_CHICKEN
+        amount: 32
+    output:
+      cooked_chicken:
+        material: COOKED_CHICKEN
+        amount: 48
+  cook_fish:
+    production_time: 10s
+    name: Cook Fish
+    type: PRODUCTION
+    input:
+      raw_fish:
+        material: RAW_FISH
+        amount: 32
+    output:
+      cooked_fish:
+        material: COOKED_FISH
+        amount: 48
+  cook_mutton:
+    production_time: 10s
+    name: Cook Mutton
+    type: PRODUCTION
+    input:
+      raw_mutton:
+        material: MUTTON
+        amount: 32
+    output:
+      cooked_mutton:
+        material: COOKED_MUTTON
+        amount: 48
+  cook_pork:
+    production_time: 10s
+    name: Cook Pork
+    type: PRODUCTION
+    input:
+      raw_pork:
+        material: PORK
+        amount: 32
+    output:
+      cooked_pork:
+        material: GRILLED_PORK
+        amount: 48
+  cook_rabbit:
+    production_time: 10s
+    name: Cook Rabbit
+    type: PRODUCTION
+    input:
+      raw_rabbit:
+        material: RABBIT
+        amount: 32
+    output:
+      cooked_rabbit:
+        material: COOKED_RABBIT
+        amount: 48
+  cook_salmon:
+    production_time: 10s
+    name: Cook Salmon
+    type: PRODUCTION
+    input:
+      raw_salmon:
+        material: RAW_FISH
+        amount: 32
+        durability: 1
+    output:
+      cooked_salmon:
+        material: COOKED_FISH
+        amount: 48
+        durability: 1
+  bake_bread:
+    production_time: 10s
+    name: Bake Bread
+    type: PRODUCTION
+    input:
+      wheat:
+        material: WHEAT
+        amount: 64
+    output:
+      bread:
+        material: BREAD
+        amount: 48
+  bake_potatoes:
+    production_time: 10s
+    name: Bake Potatoes
+    type: PRODUCTION
+    input:
+      potato:
+        material: POTATO_ITEM
+        amount: 32
+    output:
+      baked_potato:
+        material: BAKED_POTATO
+        amount: 48
+  smelt_stone_advanced:
+    production_time: 10s
+    name: Smelt Stone
+    type: PRODUCTION
+    input:
+      cobblestone:
+        material: COBBLESTONE
+        amount: 64
+    output:
+      stone:
+        material: STONE
+        amount: 128
+  smelt_coal_ore:
+    production_time: 10s
+    name: Smelt Coal Ore
+    type: PRODUCTION
+    input:
+      coal_ore:
+        material: COAL_ORE
+        amount: 64
+    output:
+      coal:
+        material: COAL
+        amount: 256
+  smelt_iron_ore:
+    production_time: 10s
+    name: Smelt Iron Ore
+    type: PRODUCTION
+    input:
+      iron_ore:
+        material: IRON_ORE
+        amount: 64
+    output:
+      iron:
+        material: IRON_INGOT
+        amount: 96
+  smelt_diamond_ore:
+    production_time: 10s
+    name: Smelt Diamond Ore
+    type: PRODUCTION
+    input:
+      diamond_ore:
+        material: DIAMOND_ORE
+        amount: 16
+    output:
+      diamond:
+        material: DIAMOND
+        amount: 32
+  smelt_gold_ore:
+    production_time: 10s
+    name: Smelt Gold Ore
+    type: PRODUCTION
+    input:
+      gold_ore:
+        material: GOLD_ORE
+        amount: 32
+    output:
+      gold:
+        material: GOLD_INGOT
+        amount: 48
+  smelt_redstone_ore:
+    production_time: 10s
+    name: Smelt Redstone Ore
+    type: PRODUCTION
+    input:
+      redstone_ore:
+        material: REDSTONE_ORE
+        amount: 64
+    output:
+      redstone_block:
+        material: REDSTONE_BLOCK
+        amount: 48
+  smelt_lapis_ore:
+    production_time: 10s
+    name: Smelt Lapis Ore
+    type: PRODUCTION
+    input:
+      lapis_ore:
+        material: LAPIS_ORE
+        amount: 64
+    output:
+      lapis_block:
+        material: LAPIS_BLOCK
+        amount: 48
+  upgrade_to_ore_smelter:
+    production_time: 30s
+    name: Upgrade to Ore Smelter
+    type: UPGRADE
+    input:
+      stone_brick:
+        material: SMOOTH_BRICK
+        amount: 64
+      iron:
+        material: IRON_INGOT
+        amount: 32
+      lava:
+        material: LAVA_BUCKET
+        amount: 1
+    factory: Ore Smelter
+  dirt:
+    production_time: 2s
+    name: Dirt!
+    type: PRODUCTION
+    input:
+      dirt:
+        material: DIRT
+        amount: 1
+    output:
+      dirt:
+        material: DIRT
+        amount: 1
+        name: Dirt!
+  upgrade_to_stone_smelter:
+    production_time: 10s
+    name: Upgrade to Basic Smelter
+    type: UPGRADE
+    input:
+      stone:
+        material: STONE
+        amount: 256
+    factory: Basic Smelter
+  upgrade_to_aesthetics:
+    production_time: 10s
+    name: Upgrade to Aesthetics Factory
+    type: UPGRADE
+    input:
+      stone:
+        material: STONE
+        amount: 128
+      dye:
+        material: INK_SACK
+        amount: 32
+        durability: -1
+    factory: Aesthetics Factory
+  upgrade_to_charcoal_maker:
+    production_time: 10s
+    name: Upgrade to Charcoal Maker
+    type: UPGRADE
+    input:
+      wood:
+        material: LOG
+        amount: 128
+        durability: -1
+    factory: Charcoal Maker
+  upgrade_to_bakery:
+    production_time: 10s
+    name: Upgrade to Bakery
+    type: UPGRADE
+    input:
+      brick:
+        material: CLAY_BRICK
+        amount: 64
+      log:
+        material: LOG
+        durability: -1
+        amount: 12
+    factory: Bakery
+  upgrade_to_grill:
+    production_time: 10s
+    name: Upgrade to Grill
+    type: UPGRADE
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 16
+      stone:
+        material: STONE
+        amount: 128
+    factory: Grill
+  upgrade_to_diamond_armor_smith:
+    production_time: 10s
+    name: Upgrade to Diamond Armor Smith
+    type: UPGRADE
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 96
+    factory: Diamond Armor Smith
+  upgrade_to_diamond_tool_smith:
+    production_time: 10s
+    name: Upgrade to Diamond Tool Smith
+    type: UPGRADE
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 64
+    factory: Diamond Tool Smith
+  upgrade_to_clay_dye:
+    production_time: 10s
+    name: Upgrade to Clay Dying Factory
+    type: UPGRADE
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 32
+        durability: -1
+    factory: Clay Dying Factory
+  upgrade_to_wool_dye:
+    production_time: 10s
+    name: Upgrade to Wool Dying Factory
+    type: UPGRADE
+    input:
+      wool:
+        material: WOOL
+        amount: 32
+        durability: -1
+    factory: Wool Dying Factory
+  upgrade_to_glass_dye:
+    production_time: 10s
+    name: Upgrade to Glass Dying Factory
+    type: UPGRADE
+    input:
+      glass:
+        material: GLASS
+        amount: 32
+    factory: Glass Dying Factory
+  upgrade_to_advanced_smelter:
+    production_time: 10s
+    name: Upgrade to Advanced Smelter
+    type: UPGRADE
+    input:
+      stone:
+        material: STONE
+        amount: 256
+      sand:
+        material: SAND
+        amount: 128
+      netherrack:
+        material: NETHERRACK
+        amount: 128
+    factory: Advanced Smelter
+  smelt_glass:
+    type: PRODUCTION
+    production_time: 10s
+    name: Smelt Glass
+    input:
+      sand:
+        material: SAND
+        amount: 64
+    output:
+      glass:
+        material: GLASS
+        amount: 128
+  smelt_netherrack:
+    production_time: 10s
+    name: Smelt Netherrack
+    type: PRODUCTION
+    input:
+      netherrack:
+        material: NETHERRACK
+        amount: 64
+    output:
+      netherbrick:
+        material: NETHER_BRICK
+        amount: 64
+  charcoal_from_logs:
+    production_time: 10s
+    name: Make Charcoal from Logs
+    type: PRODUCTION
+    input:
+      log:
+        material: LOG
+        durability: -1
+        amount: 64
+    output:
+      charcoal:
+        material: COAL
+        durability: 1
+        amount: 128
+  charcoal_from_logs_2:
+    production_time: 10s
+    name: Make Charcoal from Logs 2
+    type: PRODUCTION
+    input:
+      log:
+        material: LOG_2
+        durability: -1
+        amount: 64
+    output:
+      charcoal:
+        material: COAL
+        durability: 1
+        amount: 128
+  charcoal_from_coal:
+    production_time: 10s
+    name: Make Charcoal from Coal
+    type: PRODUCTION
+    input:
+      coal:
+        material: COAL
+        amount: 64
+    output:
+      charcoal:
+        material: COAL
+        durability: 1
+        amount: 64
+  make_cracked_stone_brick:
+    production_time: 10s
+    name: Make Cracked Stone Brick
+    type: PRODUCTION
+    input:
+      stone_brick:
+        material: SMOOTH_BRICK
+        amount: 64
+      gravel:
+        material: GRAVEL
+        amount: 8
+    output:
+      cracked_stone_brick:
+        material: SMOOTH_BRICK
+        amount: 64
+        durability: 2
+  make_circle_stone_brick:
+    production_time: 10s
+    name: Make Chiseled Stone Brick
+    type: PRODUCTION
+    input:
+      stone_brick:
+        material: SMOOTH_BRICK
+        amount: 64
+      flint:
+        material: FLINT
+        amount: 8
+    output:
+      circle_stone_brick:
+        material: SMOOTH_BRICK
+        amount: 64
+        durability: 3
+  make_mossy_stone_brick:
+    production_time: 10s
+    name: Make Mossy Stone Brick
+    type: PRODUCTION
+    input:
+      stone_brick:
+        material: SMOOTH_BRICK
+        amount: 64
+      vine:
+        material: VINE
+        amount: 8
+    output:
+      moss_stone_brick:
+        material: SMOOTH_BRICK
+        amount: 64
+        durability: 1
+  make_mossy_cobble:
+    production_time: 10s
+    name: Make Mossy Cobble
+    type: PRODUCTION
+    input:
+      cobblestone:
+        material: COBBLESTONE
+        amount: 64
+      vine:
+        material: VINE
+        amount: 8
+    output:
+      mossy_cobble:
+        material: MOSSY_COBBLESTONE
+        amount: 64
+  make_quartz:
+    production_time: 10s
+    name: Make Quartz
+    type: PRODUCTION
+    input:
+      stone:
+        material: STONE
+        amount: 64
+        durability: -1
+      dye:
+        material: INK_SACK
+        durability: 15
+    output:
+      quartz:
+        material: QUARTZ_BLOCK
+        amount: 64
+  make_red_sand:
+    production_time: 10s
+    name: Make Red SAND
+    type: PRODUCTION
+    input:
+      sand:
+        material: SAND
+        amount: 64
+      flesh:
+        material: ROTTEN_FLESH
+        amount: 8
+    output:
+      red_sand:
+        material: SAND
+        amount: 64
+        durability: 1
+  make_purpur:
+    production_time: 10s
+    name: Make Purpur
+    type: PRODUCTION
+    input:
+      stone:
+        material: STONE
+        amount: 64
+        durability: -1
+      dye:
+        material: INK_SACK
+        amount: 8
+        durability: 5
+    output:
+      purpur:
+        material: PURPUR_BLOCK
+        amount: 64
+  make_diamond_helm:
+    production_time: 10s
+    name: Make Diamond Helmets
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 40
+    output:
+      diamond_helm:
+        material: DIAMOND_HELMET
+        amount: 10
+  make_diamond_chest:
+    production_time: 10s
+    name: Make Diamond Chestplates
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 64
+    output:
+      diamond_chest:
+        material: DIAMOND_CHESTPLATE
+        amount: 10
+  make_diamond_legs:
+    production_time: 10s
+    name: Make Diamond Leggings
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 56
+    output:
+      diamond_legs:
+        material: DIAMOND_LEGGINGS
+        amount: 10
+  make_diamond_boots:
+    production_time: 10s
+    name: Make Diamond Boots
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 32
+    output:
+      diamond_boots:
+        material: DIAMOND_BOOTS
+        amount: 10
+  make_diamond_axe:
+    production_time: 10s
+    name: Make Diamond Axe
+    type: PRODUCTION
+    input:
+      diamond: 
+        material: DIAMOND
+        amount: 24
+    output:
+      diamond_axe:
+        material: DIAMOND_AXE
+        amount: 10
+  make_diamond_sword:
+    production_time: 10s
+    name: Make Diamond Sword
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 16
+    output:
+      diamond_sword:
+        material: DIAMOND_SWORD
+        amount: 10
+  make_diamond_pick:
+    production_time: 10s
+    name: Make Diamond Pick
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 24
+    output:
+      diamond_pick:
+        material: DIAMOND_PICKAXE
+        amount: 10
+  make_diamond_hoe:
+    production_time: 10s
+    name: Make Diamond Hoe
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 16
+    output:
+      diamond_hoe:
+        material: DIAMOND_HOE
+        amount: 10
+  make_diamond_shovel:
+    production_time: 10s
+    name: Make Diamond Shovel
+    type: PRODUCTION
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 8
+    output:
+      diamond_shovel:
+        material: DIAMOND_SPADE
+        amount: 10
+  smelt_netherrack_advanced:
+    production_time: 10s
+    name: Smelt Netherrack Advanced
+    type: Production
+    input:
+      netherrack:
+        material: NETHERRACK
+        amount: 128
+    output:
+      nether_brick:
+        material: NETHER_BRICK
+        amount: 256
+  smelt_glass_advanced:
+    production_time: 10s
+    name: Smelt Glass Advanced
+    type: PRODUCTION
+    input:
+      sand:
+        material: SAND
+        amount: 128
+    output:
+      glass:
+        material: GLASS
+        amount: 384
+  upgrade_to_advanced_ore_smelter:
+    production_time: 30s
+    name: Upgrade to Advanced Ore Smelter
+    type: UPGRADE
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 196
+      diamond:
+        material: DIAMOND
+        amount: 32
+    factory: Advanced Ore Smelter
+  repair_diamond_factory:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 1
+    health_gained: 100
+  smelt_coal_advanced:
+    production_time: 10s
+    name: Smelt Coal
+    type: PRODUCTION
+    input:
+      coal_ore:
+        material: COAL_ORE
+        amount: 128
+    output:
+      coal_block:
+        materila: COAL_BLOCK
+        amount: 384
+  smelt_iron_advanced:
+    production_time: 10s
+    name: Smelt Iron
+    type: PRODUCTION
+    input:
+      iron_ore:
+        material: IRON_ORE
+        amount: 128
+    output:
+      iron:
+        material: IRON_INGOT
+        amount: 256
+  smelt_diamond_advanced:
+    production_time: 10s
+    name: Smelt Diamond
+    type: PRODUCTION
+    input:
+      diamond_ore:
+        material: DIAMOND_ORE
+        amount: 64
+    output:
+      diamond:
+        material: DIAMOND
+        amount: 160
+  smelt_gold_advanced:
+    production_time: 10s
+    name: Smelt Gold
+    type: PRODUCTION
+    input:
+      gold_ore:
+        material: GOLD_ORE
+        amount: 64
+    output:
+      gold:
+        material: GOLD_INGOT
+        amount: 128
+  smelt_redstone_advanced:
+    production_time: 10s
+    name: Smelt Redstone
+    type: PRODUCTION
+    input:
+      redstone_ore:
+        material: REDSTONE_ORE
+        amount: 96
+    output:
+      redstone_block:
+        material: REDSTONE_BLOCK
+        amount: 192
+  smelt_lapis_advanced:
+    production_time: 10s
+    name: Smelt Lapis
+    type: PRODUCTION
+    input:
+      lapis_ore:
+        material: LAPIS_ORE
+        amount: 96
+    output:
+      lapis_block:
+        material: LAPIS_BLOCK
+        amount: 192
+  dye_clay_white:
+    production_time: 5s
+    name: Dye Clay White
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      white_dye:
+        material: INK_SACK
+        durability: 15
+        amount: 4
+    output:
+      white_clay:
+        material: HARD_CLAY
+        durability: 0
+        amount: 64
+  dye_clay_orange:
+    production_time: 5s
+    name: Dye Clay Orange
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      orange_dye:
+        material: INK_SACK
+        durability: 14
+        amount: 4
+    output:
+      orange_clay:
+        material: HARD_CLAY
+        durability: 1
+        amount: 64
+  dye_clay_magenta:
+    production_time: 5s
+    name: Dye Clay Magenta
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      magenta_dye:
+        material: INK_SACK
+        durability: 13
+        amount: 4
+    output:
+      magenta_clay:
+        material: HARD_CLAY
+        durability: 2
+        amount: 64
+  dye_clay_light_blue:
+    production_time: 5s
+    name: Dye Clay Light Blue
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      light_blue_dye:
+        material: INK_SACK
+        durability: 12
+        amount: 4
+    output:
+      light_blue_clay:
+        material: HARD_CLAY
+        durability: 3
+        amount: 64
+  dye_clay_yellow:
+    production_time: 5s
+    name: Dye Clay Yellow
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      yellow_dye:
+        material: INK_SACK
+        durability: 11
+        amount: 4
+    output:
+      yellow_clay:
+        material: HARD_CLAY
+        durability: 4
+        amount: 64
+  dye_clay_lime:
+    production_time: 5s
+    name: Dye Clay Lime
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      lime_dye:
+        material: INK_SACK
+        durability: 10
+        amount: 4
+    output:
+      lime_clay:
+        material: HARD_CLAY
+        durability: 5
+        amount: 64
+  dye_clay_pink:
+    production_time: 5s
+    name: Dye Clay Pink
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      pink_dye:
+        material: INK_SACK
+        durability: 9
+        amount: 4
+    output:
+      pink_clay:
+        material: HARD_CLAY
+        durability: 6
+        amount: 64
+  dye_clay_gray:
+    production_time: 5s
+    name: Dye Clay Gray
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      gray_dye:
+        material: INK_SACK
+        durability: 8
+        amount: 4
+    output:
+      gray_clay:
+        material: HARD_CLAY
+        durability: 7
+        amount: 64
+  dye_clay_light_gray:
+    production_time: 5s
+    name: Dye Clay Light Gray
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      light_gray_dye:
+        material: INK_SACK
+        durability: 7
+        amount: 4
+    output:
+      light_gray_clay:
+        material: HARD_CLAY
+        durability: 8
+        amount: 64
+  dye_clay_cyan:
+    production_time: 5s
+    name: Dye Clay Cyan
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      cyan_dye:
+        material: INK_SACK
+        durability: 6
+        amount: 4
+    output:
+      cyan_clay:
+        material: HARD_CLAY
+        durability: 9
+        amount: 64
+  dye_clay_purple:
+    production_time: 5s
+    name: Dye Clay Purple
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      purple_dye:
+        material: INK_SACK
+        durability: 5
+        amount: 4
+    output:
+      purple_clay:
+        material: HARD_CLAY
+        durability: 10
+        amount: 64
+  dye_clay_blue:
+    production_time: 5s
+    name: Dye Clay Blue
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      blue_dye:
+        material: INK_SACK
+        durability: 4
+        amount: 4
+    output:
+      blue_clay:
+        material: HARD_CLAY
+        durability: 11
+        amount: 64
+  dye_clay_brown:
+    production_time: 5s
+    name: Dye Clay Brown
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      brown_dye:
+        material: INK_SACK
+        durability: 3
+        amount: 4
+    output:
+      brown_clay:
+        material: HARD_CLAY
+        durability: 12
+        amount: 64
+  dye_clay_green:
+    production_time: 5s
+    name: Dye Clay Green
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      green_dye:
+        material: INK_SACK
+        durability: 2
+        amount: 4
+    output:
+      green_clay:
+        material: HARD_CLAY
+        durability: 13
+        amount: 64
+  dye_clay_red:
+    production_time: 5s
+    name: Dye Clay Red
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      red_dye:
+        material: INK_SACK
+        durability: 1
+        amount: 4
+    output:
+      red_clay:
+        material: HARD_CLAY
+        durability: 14
+        amount: 64
+  dye_clay_black:
+    production_time: 5s
+    name: Dye Clay Black
+    type: PRODUCTION
+    input:
+      clay:
+        material: HARD_CLAY
+        amount: 64
+        durability: -1
+      black_dye:
+        material: INK_SACK
+        durability: 0
+        amount: 4
+    output:
+      black_clay:
+        material: HARD_CLAY
+        durability: 15
+        amount: 64
+  dye_wool_white:
+    production_time: 5s
+    name: Dye Wool White
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      white_dye:
+        material: INK_SACK
+        durability: 15
+        amount: 4
+    output:
+      white_wool:
+        material: WOOL
+        durability: 0
+        amount: 64
+  dye_wool_orange:
+    production_time: 5s
+    name: Dye Wool Orange
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      orange_dye:
+        material: INK_SACK
+        durability: 14
+        amount: 4
+    output:
+      orange_wool:
+        material: WOOL
+        durability: 1
+        amount: 64
+  dye_wool_magenta:
+    production_time: 5s
+    name: Dye Wool Magenta
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      magenta_dye:
+        material: INK_SACK
+        durability: 13
+        amount: 4
+    output:
+      magenta_wool:
+        material: WOOL
+        durability: 2
+        amount: 64
+  dye_wool_light_blue:
+    production_time: 5s
+    name: Dye Wool Light Blue
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      light_blue_dye:
+        material: INK_SACK
+        durability: 12
+        amount: 4
+    output:
+      light_blue_wool:
+        material: WOOL
+        durability: 3
+        amount: 64
+  dye_wool_yellow:
+    production_time: 5s
+    name: Dye Wool Yellow
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      yellow_dye:
+        material: INK_SACK
+        durability: 11
+        amount: 4
+    output:
+      yellow_wool:
+        material: WOOL
+        durability: 4
+        amount: 64
+  dye_wool_lime:
+    production_time: 5s
+    name: Dye Wool Lime
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      lime_dye:
+        material: INK_SACK
+        durability: 10
+        amount: 4
+    output:
+      lime_wool:
+        material: WOOL
+        durability: 5
+        amount: 64
+  dye_wool_pink:
+    production_time: 5s
+    name: Dye Wool Pink
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      pink_dye:
+        material: INK_SACK
+        durability: 9
+        amount: 4
+    output:
+      pink_wool:
+        material: WOOL
+        durability: 6
+        amount: 64
+  dye_wool_gray:
+    production_time: 5s
+    name: Dye Wool Gray
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      gray_dye:
+        material: INK_SACK
+        durability: 8
+        amount: 4
+    output:
+      gray_wool:
+        material: WOOL
+        durability: 7
+        amount: 64
+  dye_wool_light_gray:
+    production_time: 5s
+    name: Dye Wool Light Gray
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      light_gray_dye:
+        material: INK_SACK
+        durability: 7
+        amount: 4
+    output:
+      light_gray_wool:
+        material: WOOL
+        durability: 8
+        amount: 64
+  dye_wool_cyan:
+    production_time: 5s
+    name: Dye Wool Cyan
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      cyan_dye:
+        material: INK_SACK
+        durability: 6
+        amount: 4
+    output:
+      cyan_wool:
+        material: WOOL
+        durability: 9
+        amount: 64
+  dye_wool_purple:
+    production_time: 5s
+    name: Dye Wool Purple
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      purple_dye:
+        material: INK_SACK
+        durability: 5
+        amount: 4
+    output:
+      purple_wool:
+        material: WOOL
+        durability: 10
+        amount: 64
+  dye_wool_blue:
+    production_time: 5s
+    name: Dye Wool Blue
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      blue_dye:
+        material: INK_SACK
+        durability: 4
+        amount: 4
+    output:
+      blue_wool:
+        material: WOOL
+        durability: 11
+        amount: 64
+  dye_wool_brown:
+    production_time: 5s
+    name: Dye Wool Brown
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      brown_dye:
+        material: INK_SACK
+        durability: 3
+        amount: 4
+    output:
+      brown_wool:
+        material: WOOL
+        durability: 12
+        amount: 64
+  dye_wool_green:
+    production_time: 5s
+    name: Dye Wool Green
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      green_dye:
+        material: INK_SACK
+        durability: 2
+        amount: 4
+    output:
+      green_wool:
+        material: WOOL
+        durability: 13
+        amount: 64
+  dye_wool_red:
+    production_time: 5s
+    name: Dye Wool Red
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      red_dye:
+        material: INK_SACK
+        durability: 1
+        amount: 4
+    output:
+      red_wool:
+        material: WOOL
+        durability: 14
+        amount: 64
+  dye_wool_black:
+    production_time: 5s
+    name: Dye Wool Black
+    type: PRODUCTION
+    input:
+      wool:
+        material: WOOL
+        amount: 64
+        durability: -1
+      black_dye:
+        material: INK_SACK
+        durability: 0
+        amount: 4
+    output:
+      black_wool:
+        material: WOOL
+        durability: 15
+        amount: 64
+  dye_glass_white:
+    production_time: 5s
+    name: Dye Glass White
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      white_dye:
+        material: INK_SACK
+        durability: 15
+        amount: 4
+    output:
+      white_glass:
+        material: STAINED_GLASS
+        durability: 0
+        amount: 64
+  dye_glass_orange:
+    production_time: 5s
+    name: Dye Glass Orange
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      orange_dye:
+        material: INK_SACK
+        durability: 14
+        amount: 4
+    output:
+      orange_glass:
+        material: STAINED_GLASS
+        durability: 1
+        amount: 64
+  dye_glass_magenta:
+    production_time: 5s
+    name: Dye Glass Magenta
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      magenta_dye:
+        material: INK_SACK
+        durability: 13
+        amount: 4
+    output:
+      magenta_glass:
+        material: STAINED_GLASS
+        durability: 2
+        amount: 64
+  dye_glass_light_blue:
+    production_time: 5s
+    name: Dye Glass Light Blue
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      light_blue_dye:
+        material: INK_SACK
+        durability: 12
+        amount: 4
+    output:
+      light_blue_glass:
+        material: STAINED_GLASS
+        durability: 3
+        amount: 64
+  dye_glass_yellow:
+    production_time: 5s
+    name: Dye Glass Yellow
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      yellow_dye:
+        material: INK_SACK
+        durability: 11
+        amount: 4
+    output:
+      yellow_glass:
+        material: STAINED_GLASS
+        durability: 4
+        amount: 64
+  dye_glass_lime:
+    production_time: 5s
+    name: Dye Glass Lime
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      lime_dye:
+        material: INK_SACK
+        durability: 10
+        amount: 4
+    output:
+      lime_glass:
+        material: STAINED_GLASS
+        durability: 5
+        amount: 64
+  dye_glass_pink:
+    production_time: 5s
+    name: Dye Glass Pink
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      pink_dye:
+        material: INK_SACK
+        durability: 9
+        amount: 4
+    output:
+      pink_glass:
+        material: STAINED_GLASS
+        durability: 6
+        amount: 64
+  dye_glass_gray:
+    production_time: 5s
+    name: Dye Glass Gray
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      gray_dye:
+        material: INK_SACK
+        durability: 8
+        amount: 4
+    output:
+      gray_glass:
+        material: STAINED_GLASS
+        durability: 7
+        amount: 64
+  dye_glass_light_gray:
+    production_time: 5s
+    name: Dye Glass Light Gray
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      light_gray_dye:
+        material: INK_SACK
+        durability: 7
+        amount: 4
+    output:
+      light_gray_glass:
+        material: STAINED_GLASS
+        durability: 8
+        amount: 64
+  dye_glass_cyan:
+    production_time: 5s
+    name: Dye Glass Cyan
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      cyan_dye:
+        material: INK_SACK
+        durability: 6
+        amount: 4
+    output:
+      cyan_glass:
+        material: STAINED_GLASS
+        durability: 9
+        amount: 64
+  dye_glass_purple:
+    production_time: 5s
+    name: Dye Glass Purple
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      purple_dye:
+        material: INK_SACK
+        durability: 5
+        amount: 4
+    output:
+      purple_glass:
+        material: STAINED_GLASS
+        durability: 10
+        amount: 64
+  dye_glass_blue:
+    production_time: 5s
+    name: Dye Glass Blue
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      blue_dye:
+        material: INK_SACK
+        durability: 4
+        amount: 4
+    output:
+      blue_glass:
+        material: STAINED_GLASS
+        durability: 11
+        amount: 64
+  dye_glass_brown:
+    production_time: 5s
+    name: Dye Glass Brown
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      brown_dye:
+        material: INK_SACK
+        durability: 3
+        amount: 4
+    output:
+      brown_glass:
+        material: STAINED_GLASS
+        durability: 12
+        amount: 64
+  dye_glass_green:
+    production_time: 5s
+    name: Dye Glass Green
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      green_dye:
+        material: INK_SACK
+        durability: 2
+        amount: 4
+    output:
+      green_glass:
+        material: STAINED_GLASS
+        durability: 13
+        amount: 64
+  dye_glass_red:
+    production_time: 5s
+    name: Dye Glass Red
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      red_dye:
+        material: INK_SACK
+        durability: 1
+        amount: 4
+    output:
+      red_glass:
+        material: STAINED_GLASS
+        durability: 14
+        amount: 64
+  dye_glass_black:
+    production_time: 5s
+    name: Dye Glass Black
+    type: PRODUCTION
+    input:
+      glass:
+        material: GLASS
+        amount: 64
+      black_dye:
+        material: INK_SACK
+        durability: 0
+        amount: 4
+    output:
+      black_glass:
+        material: STAINED_GLASS
+        durability: 15
+        amount: 64
