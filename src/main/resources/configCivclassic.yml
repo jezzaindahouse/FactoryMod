@@ -72,6 +72,8 @@ factories:
      - make_red_sand
      - make_purpur
      - make_prismarine
+     - make_prismarine_bricks
+     - make_dark_prismarine
      - repair_aesthetics
   dye_wool:
     type: FCCUPGRADE
@@ -827,7 +829,7 @@ recipes:
         material: PRISMARINE
         durability: 1
         amount: 64
-  make__dark_prismarine:
+  make_dark_prismarine:
     production_time: 10s
     name: Make Dark Prismarine
     type: PRODUCTION
