@@ -71,6 +71,7 @@ factories:
      - make_quartz
      - make_red_sand
      - make_purpur
+     - make_prismarine
      - repair_aesthetics
   dye_wool:
     type: FCCUPGRADE
@@ -792,6 +793,22 @@ recipes:
     output:
       purpur:
         material: PURPUR_BLOCK
+        amount: 64
+  make_prismarine:
+    production_time: 10s
+    name: Make Prismarine
+    type: PRODUCTION
+    input:
+      stone:
+        material: STONE
+        amount: 64
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 4
+    output:
+      prismarine:
+        material: PRISMARINE
         amount: 64
   make_diamond_helm:
     production_time: 10s
