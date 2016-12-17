@@ -244,7 +244,6 @@ factories:
      - make_fences
      - make_signs
      - make_ladders
-     - make_trapdoors
      - make_bookshelves
      - repair_carpentry
   rails:
@@ -258,15 +257,6 @@ factories:
      - make_minecart
      - repair_rails
 recipes:
-  repair_basic_factory:
-    type: REPAIR
-    name: Repair Factory
-    production_time: 5s
-    input:
-      redstone_block:
-        material: REDSTONE_BLOCK
-        amount: 1
-    health_gained: 100
   smelt_stone:
     production_time: 10s
     name: Smelt Stone
@@ -977,7 +967,7 @@ recipes:
   smelt_netherrack_advanced:
     production_time: 10s
     name: Smelt Netherrack Advanced
-    type: Production
+    type: PRODUCTION
     input:
       netherrack:
         material: NETHERRACK
@@ -1029,7 +1019,7 @@ recipes:
         amount: 128
     output:
       coal_block:
-        materila: COAL_BLOCK
+        material: COAL_BLOCK
         amount: 384
   smelt_iron_advanced:
     production_time: 10s
