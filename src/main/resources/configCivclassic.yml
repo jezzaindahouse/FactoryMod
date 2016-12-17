@@ -186,7 +186,6 @@ factories:
      - smelt_gold_advanced
      - smelt_redstone_advanced
      - smelt_lapis_advanced
-     - make_bastion_advanced
      - repair_diamond_factory
   advanced_smelter:
     type: FCCUPGRADE
@@ -1026,36 +1025,20 @@ recipes:
     input:
       diamond:
         material: DIAMOND
-        amount: 16
-      iron:
-        material: IRON_INGOT
-        amount: 64
-      slime:
-        material: SLIME_BALL
-        amount: 16
-    output:
-      bastion:
-        material: SPONGE
-        name: Bastion
-        lore: 
-         - This bastion will protect you from grief
-         - It will also block pearls when they land
-         - As well as stop elytra
         amount: 8
-  make_bastion_advanced:
-    production_time: 10s
-    name: Make Bastion
-    type: PRODUCTION
-    input:
-      diamond:
-        material: DIAMOND
-        amount: 16
       iron:
         material: IRON_INGOT
         amount: 64
-      slime:
-        material: SLIME_BALL
+      gold:
+        material: GOLD_INGOT
         amount: 16
+      redstone:
+        material: REDSTONE
+        amount: 12
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 12
     output:
       bastion:
         material: SPONGE
@@ -1064,7 +1047,7 @@ recipes:
          - This bastion will protect you from grief
          - It will also block pearls when they land
          - As well as stop elytra
-        amount: 12
+        amount: 16
   upgrade_to_bio_lab:
     production_time: 10s
     name: Upgrade to Bio Lab
