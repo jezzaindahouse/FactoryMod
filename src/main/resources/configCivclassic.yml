@@ -245,6 +245,7 @@ factories:
      - make_signs
      - make_ladders
      - make_bookshelves
+     - make_trapdoors
      - repair_carpentry
   rails:
     type: FCCUPGRADE
@@ -2264,6 +2265,18 @@ recipes:
       bookshelves:
         material: BOOKSHELF
         amount: 64
+  make_trapdoors:
+    production_time: 10s
+    name: Make Trap Doors
+    type: PRODUCTION
+    input:
+      chest:
+        material: CHEST
+        amount: 48
+    output:
+      trapdoor:
+        material: TRAP_DOOR
+        amount: 256
   repair_carpentry:
     production_time: 10s
     name: Repair Factory
