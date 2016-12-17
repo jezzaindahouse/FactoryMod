@@ -36,6 +36,8 @@ factories:
      - upgrade_to_glass_dye
      - upgrade_to_clay_dye
      - upgrade_to_bio_lab
+     - upgrade_to_carpentry
+     - upgrade_to_rails
      - repair_dirt_factory
   stone_smelter:
     type: FCCUPGRADE
@@ -231,6 +233,27 @@ factories:
      - sapling_to_acacia
      - sapling_to_dark_oak
      - repair_bio_lab
+  carpentry:
+    type: FCCUPGRADE
+    name: Carpentry Factory
+    citadelBreakReduction: 1.0
+    recipes:
+     - make_fences
+     - make_signs
+     - make_ladders
+     - make_trapdoors
+     - make_bookshelves
+     - repair_carpentry
+  rails:
+    type: FCCUPGRADE
+    name: Rail Factory
+    citadelBreakReduction: 1.0
+    recipes:
+     - make_rail
+     - make_powered_rail
+     - make_detector_rail
+     - make_minecart
+     - repair_rails
 recipes:
   repair_basic_factory:
     type: REPAIR
@@ -2134,4 +2157,154 @@ recipes:
       Dirt!:
         material: DIRT
         amount: 8
+    health_gained: 100
+  upgrade_to_carpentry:
+    production_time: 10s
+    name: Upgrade to Carpentry Factory
+    type: UPGRADE
+    input:
+      chest:
+        material: CHEST
+        amount: 32
+    factory: Carpentry Factory
+  make_fences:
+    production_time: 10s
+    name: Make Fences
+    type: PRODUCTION
+    input:
+      chest:
+        material: CHEST
+        amount: 12
+    output:
+      fence:
+        material: FENCE
+        amount: 256
+  make_signs:
+    production_time: 10s
+    name: Make Signs
+    type: PRODUCTION
+    input:
+      chest:
+        material: CHEST
+        amount: 8
+    output:
+      sign:
+        material: SIGN
+        amount: 64
+  make_ladders:
+    production_time: 10s
+    name: Make Ladders
+    type: PRODUCTION
+    input:
+      chest:
+        material: CHEST
+        amount: 8
+    output:
+      ladder:
+        material: LADDER
+        amount: 256
+  make_bookshelves:
+    production_time: 10s
+    name: Make Bookshelves
+    type: PRODUCTION
+    input:
+      paper:
+        material: PAPER
+        amount: 64
+      chest:
+        material: CHEST
+        amount: 8
+    output:
+      bookshelves:
+        material: BOOKSHELF
+        amount: 64
+  repair_carpentry:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      chest:
+        material: CHEST
+        amount: 2
+    health_gained: 100
+  upgrade_to_rails:
+    production_time: 10s
+    name: Upgrade to Rail Factory
+    type: UPGRADE
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 64
+      redstone:
+        material: REDSTONE
+        amount: 32
+      gold:
+        material: GOLD_INGOT
+        amount: 8
+    factory: Rail Factory
+  make_rail:
+    production_time: 10s
+    name: Make Rails
+    type: PRODUCTION
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 128
+      stick:
+        material: STICK
+        amount: 16
+    output:
+      rails:
+        material: RAILS
+        amount: 576
+  make_powered_rail:
+    production_time: 10s
+    name: Make Powered Rails
+    type: PRODUCTION
+    input:
+      gold:
+        material: GOLD_INGOT
+        amount: 64
+      redstone:
+        material: REDSTONE
+        amount: 8
+    output:
+      powered_rail:
+        material: POWERED_RAIL
+        amount: 128
+  make_detector_rail:
+    production_time: 10s
+    name: Make Detector Rails
+    type: PRODUCTION
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 18
+      redstone:
+        material: REDSTONE
+        amount: 2
+    output:
+      detector_rail:
+        material: DETECTOR_RAIL
+        amount: 32
+  make_minecart:
+    production_time: 10s
+    name: Make Minecarts
+    type: PRODUCTION
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 64
+    output:
+      minecart:
+        material: MINECART
+        amount: 27
+  repair_rails:
+    production_time: 10s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      iron:
+        material: IRON_INGOT
+        amount: 4
     health_gained: 100
