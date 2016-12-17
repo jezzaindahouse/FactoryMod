@@ -74,6 +74,7 @@ factories:
      - make_prismarine
      - make_prismarine_bricks
      - make_dark_prismarine
+     - make_sea_lantern
      - repair_aesthetics
   dye_wool:
     type: FCCUPGRADE
@@ -849,6 +850,22 @@ recipes:
         material: PRISMARINE
         durability: 2
         amount: 64
+  make_sea_lantern:
+    production_time: 10s
+    name: Make Sea Lantern
+    type: PRODUCTION
+    input:
+      glowstone:
+        material: GLOWSTONE
+        amount: 32
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 4
+    output:
+      sea_lantern:
+        material: SEA_LANTERN
+        amount: 32
   make_diamond_helm:
     production_time: 10s
     name: Make Diamond Helmets
