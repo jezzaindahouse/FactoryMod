@@ -201,6 +201,7 @@ factories:
      - smelt_stone_advanced
      - smelt_glass_advanced
      - smelt_netherrack_advanced
+     - crack_fossil
      - repair_advanced_smelter
   diamond_armor:
     type: FCCUPGRADE
@@ -2391,3 +2392,745 @@ recipes:
         material: IRON_INGOT
         amount: 4
     health_gained: 100
+  crack_fossil:
+    type: RANDOM
+    name: Crack Fossil
+    production_time: 3s
+    fuel_consumption_intervall: 30s
+    input:
+      fossil:
+        material: PRISMARINE_SHARD
+        amount: 1
+        lore:
+          - Crack me in a factory for a prize!
+    outputs:
+      dragon_egg:
+        chance: 0.0000000001
+        dragon_egg:
+          material: DRAGON_EGG
+          amount: 1
+          lore:
+           - Egg of Creation
+      gezo:
+        chance: 0.0000040909
+        gezo:
+          material: PAPER
+          amount: 1
+          lore:
+           - Gezo was here !!!
+      clockback:
+        chance: 0.0000040909
+        clockback:
+          material: WATCH
+          amount: 1
+          lore:
+           - Clockback
+          enchants:
+            kb:
+              enchant: KNOCKBACK
+              level: 3
+      apollo_bow:
+        chance: 0.0000040909
+        apollo_bow:
+          material: BOW
+          amount: 1
+          lore:
+           - Apollo's Bow
+          enchants:
+            power:
+              enchant: ARROW_DAMAGE
+              level: 5
+            ub:
+              enchant: DURABILITY
+              level: 3
+            flame:
+              enchant: ARROW_FIRE
+              level: 1
+            infinity:
+              enchant: ARROW_INFINITE
+              level: 1
+      imcando_pick:
+        chance: 0.0000040909
+        imcando_pick:
+          material: DIAMOND_PICKAXE
+          amount: 1
+          lore:
+           - Imcando Pickaxe
+          enchants:
+            efficiency:
+              enchant: DIG_SPEED
+              level: 5
+            ub:
+              enchant: DURABILITY
+              level: 3
+      power_5_book:
+        chance: 0.0000120909
+        power_5_book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            power5:
+              enchant: ARROW_DAMAGE
+              level: 5
+      infinity_book:
+        chance: 0.0000120909
+        infinity_book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            infinity:
+              enchant: ARROW_INFINITE
+              level: 1
+      efficiency_5_book:
+        chance: 0.0000120909
+        efficiency_5_book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            eff5:
+              enchant: DIG_SPEED
+              level: 5
+      unbreaking_3_book:
+        chance: 0.0000120909
+        unbreaking_3_book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            ub3:
+              enchant: DURABILITY
+              level: 3
+      sharpness_5_book:
+        chance: 0.0000120909
+        sharpness_5_book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            sharpness5:
+              enchant: DAMAGE_ALL
+              level: 5
+      protection_4_book:
+        chance: 0.0000120909
+        protection_4_book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            protection4:
+              enchant: PROTECTION_ENVIRONMENTAL
+              level: 4
+      silk_touch_book:
+        chance: 0.0000110909
+        silk_touch_book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            silktouch:
+              enchant: SILK_TOUCH
+              level: 1
+      diamond_horse_armor:
+        chance: 0.000037038
+        diamond_horse_armor:
+          material: DIAMOND_BARDING
+          amount: 1
+      bastion:
+        chance: 0.000037037
+        bastion:
+          material: SPONGE
+          name: Bastion
+          lore:
+           - This bastion will protect you from grief
+           - It will also block pearls when they land
+           - As well as stop elytra
+          amount: 1
+      diamond_pickaxe:
+        chance: 0.000037037
+        diamond_pickaxe:
+          material: DIAMOND_PICKAXE
+          amount: 1
+      diamond_axe:
+        chance: 0.000037037
+        diamond_axe:
+          material: DIAMOND_AXE
+          amount: 1
+      diamond_shovel:
+        chance: 0.000037037
+        diamond_shovel:
+          material: DIAMOND_SPADE
+          amount: 1
+      diamond_chestplate:
+        chance: 0.000037037
+        diamond_chestplate:
+          material: DIAMOND_CHESTPLATE
+          amount: 1
+      diamond_leggings:
+        chance: 0.000037037
+        diamond_leggings:
+          material: DIAMOND_LEGGINGS
+          amount: 1
+      diamond_helmet:
+        chance: 0.000037037
+        diamond_helmet:
+          material: DIAMOND_HELMET
+          amount: 1
+      diamond_boots:
+        chance: 0.000037037
+        diamond_boots:
+          material: DIAMOND_BOOTS
+          amount: 1
+      iron_ingots:
+        chance: 0.000037037
+        iron_ingots:
+          material: IRON_INGOT
+          amount: 64
+      diamond_block:
+        chance: 0.000037037
+        diamond_block:
+          material: DIAMOND_BLOCK
+          amount: 1
+      creeper:
+        chance: 0.000037037
+        creeper:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 50
+      zombie:
+        chance: 0.000037037
+        zombie:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 54
+      skeleton:
+        chance: 0.000037037
+        skeleton:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 51
+      spider:
+        chance: 0.000037037
+        spider:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 52
+      blaze:
+        chance: 0.000037037
+        blaze:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 61
+      ghast:
+        chance: 0.000037037
+        ghast:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 56
+      guardian:
+        chance: 0.000037037
+        guardian:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 68
+      magmacube:
+        chance: 0.000037037
+        magmacube:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 62
+      slime:
+        chance: 0.000037037
+        slime:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 55
+      witch:
+        chance: 0.000037037
+        witch:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 66
+      villager:
+        chance: 0.000037037
+        villager:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 120
+      cavespider:
+        chance: 0.000037037
+        cavespider:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 59
+      enderman:
+        chance: 0.000037037
+        enderman:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 58
+      zombiepigman:
+        chance: 0.000037037
+        zombiepigman:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 57
+      charcoal:
+        chance: 0.000037037
+        charcoal:
+          material: COAL
+          amount: 2048
+          durability: 1
+      beacon:
+        chance: 0.000037037
+        beacon:
+          material: BEACON
+          amount: 1
+      iron_pickaxe:
+        chance: 0.0029411764
+        iron_pickaxe:
+          material: IRON_PICKAXE
+          amount: 1
+      iron_spade:
+        chance: 0.00029411764
+        iron_spade:
+          material: IRON_SPADE
+          amount: 1
+      iron_axe:
+        chance: 0.00029411764
+        iron_axe:
+          material: IRON_AXE
+          amount: 1
+      iron_sword:
+        chance: 0.00029411764
+        iron_sword:
+          material: IRON_SWORD
+          amount: 1
+      note_blocks:
+        chance: 0.00029411764
+        note_blocks:
+          material: NOTE_BLOCK
+          amount: 5
+      diamond:
+        chance: 0.00029411764
+        diamond:
+          material: DIAMOND
+          amount: 1
+      emerald:
+        chance: 0.00029411764
+        emerald:
+          material: EMERALD
+          amount: 1
+      iron_block:
+        chance: 0.00029411764
+        iron_block:
+          material: IRON_BLOCK
+          amount: 1
+      redstone_block:
+        chance: 0.00029411764
+        redstone_block:
+          material: REDSTONE_BLOCK
+          amount: 1
+      lapis_block:
+        chance: 0.00029411764
+        lapis_block:
+          material: LAPIS_BLOCK
+          amount: 1
+      record_13:
+        chance: 0.000029411766
+        record_13:
+          material: GOLD_RECORD
+          amount: 1
+      record_cats:
+        chance: 0.000029411764
+        record_cats:
+          material: GREEN_RECORD
+          amount: 1
+      record_blocks:
+        chance: 0.000029411764
+        record_blocks:
+          material: RECORD_3
+          amount: 1
+      record_chirp:
+        chance: 0.000029411764
+        record_chirp:
+          material: RECORD_4
+          amount: 1
+      record_far:
+        chance: 0.000029411764
+        record_far:
+          material: RECORD_5
+          amount: 1
+      record_mall:
+        chance: 0.000029411764
+        record_mall:
+          material: RECORD_6
+          amount: 1
+      record_mellohi:
+        chance: 0.000029411764
+        record_mellohi:
+          material: RECORD_7
+          amount: 1
+      record_stal:
+        chance: 0.000029411764
+        record_stal:
+          material: RECORD_8
+          amount: 1
+      record_strad:
+        chance: 0.000029411764
+        record_strad:
+          material: RECORD_9
+          amount: 1
+      record_ward:
+        chance: 0.000029411764
+        record_ward:
+          material: RECORD_10
+          amount: 64
+      record_11:
+        chance: 0.000029411764
+        record_11:
+          material: RECORD_11
+          amount: 1
+      record_wait:
+        chance: 0.000029411764
+        record_wait:
+          material: RECORD_12
+          amount: 1
+      minecart:
+        chance: 0.00062352939
+        minecart:
+          material: MINECART
+          amount: 1
+      mooshroom:
+        chance: 0.00029411764
+        mooshroom:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 96
+      horse:
+        chance: 0.00029411764
+        horse:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 100
+      rabbit:
+        chance: 0.00029411764
+        rabbit:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 101
+      ocelot:
+        chance: 0.00029411764
+        ocelot:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 98
+      squid:
+        chance: 0.00029411764
+        squid:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 94
+      wolf:
+        chance: 0.00029411764
+        wolf:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 95
+      iron_horse_armor:
+        chance: 0.00029411764
+        iron_horse_armor:
+          material: IRON_BARDING
+          amount: 1
+      bucket:
+        chance: 0.00029411764
+        bucket:
+          material: BUCKET
+          amount: 1
+      prismarine_shards:
+        chance: 0.00029411764
+        prismarine_shards:
+          material: PRISMARINE_SHARD
+          amount: 5
+      prismarine_crystals:
+        chance: 0.00029411788
+        prismarine_crystals:
+          material: PRISMARINE_CRYSTALS
+          amount: 3
+      jukebox:
+        chance: 0.00029411764
+        jukebox:
+          material: JUKEBOX
+          amount: 1
+      rail:
+        chance: 0.0069446
+        rail:
+          material: RAILS
+          amount: 1
+      stone_pickaxe:
+        chance: 0.00694444
+        stone_pickaxe:
+          material: STONE_PICKAXE
+          amount: 1
+      stone_shovel:
+        chance: 0.00694444
+        stone_shovel:
+          material: STONE_SPADE
+          amount: 1
+      stone_axe:
+        chance: 0.00694444
+        stone_axe:
+          material: STONE_AXE
+          amount: 1
+      stone_hoe:
+        chance: 0.00694444
+        stone_hoe:
+          material: STONE_HOE
+          amount: 1
+      iron_ingot:
+        chance: 0.00694444
+        iron_ingot:
+          material: IRON_INGOT
+          amount: 1
+      redstone:
+        chance: 0.00694444
+        redstone:
+          material: REDSTONE
+          amount: 1
+      packed_ice:
+        chance: 0.00694444
+        packed_ice:
+          material: PACKED_ICE
+          amount: 1
+      melon_seeds:
+        chance: 0.00694444
+        melon_seeds:
+          material: MELON_SEEDS
+          amount: 1
+      pumpkin_seeds:
+        chance: 0.00694444
+        pumpkin_seeds:
+          material: PUMPKIN_SEEDS
+          amount: 1
+      beetroot_seeds:
+        chance: 0.00694444
+        beetroot_seeds:
+          material: BEETROOT_SEEDS
+          amount: 1
+      carrot:
+        chance: 0.00694444
+        carrot:
+          material: CARROT_ITEM
+          amount: 1
+      potato:
+        chance: 0.00694444
+        potato:
+          material: POTATO_ITEM
+          amount: 1
+      snowball:
+        chance: 0.00694444
+        snowball:
+          material: SNOW_BALL
+          amount: 16
+      leather_helmet:
+        chance: 0.00694444
+        leather_helmet:
+          material: LEATHER_HELMET
+          amount: 1
+      leather_chestplate:
+        chance: 0.00694444
+        leather_chestplate:
+          material: LEATHER_CHESTPLATE
+          amount: 1
+      leather_leggings:
+        chance: 0.00694444
+        leather_leggings:
+          material: LEATHER_LEGGINGS
+          amount: 1
+      leather_boots:
+        chance: 0.00694444
+        leather_boots:
+          material: LEATHER_BOOTS
+          amount: 1
+      oak_sapling:
+        chance: 0.00694444
+        oak_sapling:
+          material: SAPLING
+          amount: 1
+          durability: 0
+      spruce_sapling:
+        chance: 0.00694444
+        spruce_sapling:
+          material: SAPLING
+          amount: 1
+          durability: 1
+      birch_sapling:
+        chance: 0.00694444
+        birch_sapling:
+          material: SAPLING
+          amount: 1
+          durability: 2
+      jungle_sapling:
+        chance: 0.00694444
+        jungle_sapling:
+          material: SAPLING
+          amount: 1
+          durability: 3
+      acacia_sapling:
+        chance: 0.00694444
+        acacia_sapling:
+          material: SAPLING
+          amount: 1
+          durability: 4
+      dark_oak_sapling:
+        chance: 0.00694444
+        dark_oak_sapling:
+          material: SAPLING
+          amount: 1
+          durability: 5
+      dead_bush:
+        chance: 0.00694444
+        dead_bush:
+          material: DEAD_BUSH
+          amount: 1
+          durability: 0
+      grass:
+        chance: 0.00694444
+        grass:
+          material: DEAD_BUSH
+          amount: 1
+          durability: 1
+      fern:
+        chance: 0.00694444
+        fern:
+          material: DEAD_BUSH
+          amount: 1
+          durability: 2
+      red_mushroom:
+        chance: 0.00694444
+        red_mushroom:
+          material: RED_MUSHROOM
+          amount: 1
+      brown_mushroom:
+        chance: 0.00694444
+        brown_mushroom:
+          material: BROWN_MUSHROOM
+          amount: 1
+      clay:
+        chance: 0.00694444
+        clay:
+          material: CLAY
+          amount: 1
+      fishing_rod:
+        chance: 0.00694444
+        fishing_rod:
+          material: FISHING_ROD
+          amount: 1
+      pig:
+        chance: 0.00694444
+        pig:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 90
+      sheep:
+        chance: 0.00694444
+        sheep:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 91
+      cow:
+        chance: 0.00694444
+        cow:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 92
+      chicken:
+        chance: 0.00694444
+        chicken:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 93
+      bone:
+        chance: 0.00694444
+        bone:
+          material: BONE
+          amount: 1
+      flint:
+        chance: 0.04926
+        flint:
+          material: FLINT
+          amount: 1
+      dirt:
+        chance: 0.04926
+        dirt:
+          material: DIRT
+          amount: 1
+      gravel:
+        chance: 0.04926
+        gravel:
+          material: GRAVEL
+          amount: 1
+      cobblestone:
+        chance: 0.04926
+        cobblestone:
+          material: COBBLESTONE
+          amount: 1
+      rotten_flesh:
+        chance: 0.04926
+        rotten_flesh:
+          material: ROTTEN_FLESH 
+          amount: 1
+      glass_bottle:
+        chance: 0.04926
+        glass_bottle:
+          material: GLASS_BOTTLE
+          amount: 1
+      granite:
+        chance: 0.04926
+        granite:
+          material: STONE
+          amount: 1
+          durability: 1
+      diorite:
+        chance: 0.04926
+        diorite:
+          material: STONE
+          amount: 1
+          durability: 3
+      andesite:
+        chance: 0.04926
+        andesite:
+          material: STONE
+          amount: 1
+          durability: 5
+      oak_log:
+        chance: 0.04926
+        oak_log:
+          material: LOG
+          amount: 1
+          durability: 0
+      spruce_log:
+        chance: 0.04926
+        spruce_log:
+          material: LOG
+          amount: 1
+          durability: 1
+      birch_log:
+        chance: 0.04926
+        birch_log:
+          material: LOG
+          amount: 1
+          durability: 2
+      jungle_log:
+        chance: 0.04926
+        jungle_log:
+          material: LOG
+          amount: 1
+          durability: 3
+      acacia_log:
+        chance: 0.04926
+        acacia_log:
+          material: LOG_2
+          amount: 1
+          durability: 0
+      dark_oak_log:
+        chance: 0.04926
+        dark_oak_log:
+          material: LOG_2
+          amount: 1
+          durability: 1
