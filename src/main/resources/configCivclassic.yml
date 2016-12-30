@@ -8,7 +8,7 @@ default_menu_factory: Dirt Factory
 default_return_rate: 0.5
 break_grace_period: 1000d
 decay_intervall: 1h
-decay_amount: 21
+decay_amount: 2
 default_health: 1000
 disable_nether: false
 use_recipe_yamlidentifiers: true
@@ -176,6 +176,7 @@ factories:
      - smelt_redstone_ore
      - smelt_lapis_ore
      - make_bastion_basic
+     - crack_fossil
      - upgrade_to_advanced_ore_smelter
      - repair_ore_smelter
   advanced_ore_smelter:
@@ -190,6 +191,7 @@ factories:
      - smelt_gold_advanced
      - smelt_redstone_advanced
      - smelt_lapis_advanced
+     - make_bastion_basic
      - repair_diamond_factory
   advanced_smelter:
     type: FCCUPGRADE
@@ -257,6 +259,28 @@ factories:
      - make_detector_rail
      - make_minecart
      - repair_rails
+  basic_pipe:
+    type: PIPE
+    name: Basic Pipe
+    setupcost:
+      iron:
+        material: IRON_INGOT
+        amount: 16
+    transfer_time_multiplier: 1s
+    transferamount: 16
+    glass_color: 9
+    maximum_length: 32
+  basic_sorter:
+    type: SORTER
+    name: Basic Sorter
+    fuel_consumption_intervall: 0s
+    setupcost:
+      iron:
+        material: IRON_INGOT
+        amount: 8
+    sort_time: 2s
+    sort_amount: 32
+    maximum_materials_per_side: 20
 recipes:
   smelt_stone:
     production_time: 10s
@@ -2367,3 +2391,745 @@ recipes:
         material: IRON_INGOT
         amount: 4
     health_gained: 100
+  crack_fossil:
+    type: RANDOM
+    name: Crack Fossil
+    production_time: 3s
+    fuel_consumption_intervall: 30s
+    input:
+      fossil:
+        material: PRISMARINE_SHARD
+        amount: 1
+        lore:
+          - Crack me in a factory for a prize!
+    outputs:
+      god1:
+        chance: 0.0000000001
+        dragonegg:
+          material: DRAGON_EGG
+          amount: 1
+          lore:
+           - Egg of Creation
+      god2:
+        chance: 0.0000040909
+        ancientnote:
+          material: PAPER
+          amount: 1
+          lore:
+           - Gezo was here !!!
+      god3:
+        chance: 0.0000040909
+        clockback:
+          material: WATCH
+          amount: 1
+          lore:
+           - Clockback
+          enchants:
+            kb:
+              enchant: KNOCKBACK
+              level: 3
+      god4:
+        chance: 0.0000040909
+        apollosbow:
+          material: BOW
+          amount: 1
+          lore:
+           - Apollo's Bow
+          enchants:
+            power:
+              enchant: ARROW_DAMAGE
+              level: 5
+            ub:
+              enchant: DURABILITY
+              level: 3
+            flame:
+              enchant: ARROW_FIRE
+              level: 1
+            infinity:
+              enchant: ARROW_INFINITE
+              level: 1
+      god5:
+        chance: 0.0000040909
+        imcandopickaxe:
+          material: DIAMOND_PICKAXE
+          amount: 1
+          lore:
+           - Imcando Pickaxe
+          enchants:
+            efficiency:
+              enchant: DIG_SPEED
+              level: 5
+            ub:
+              enchant: DURABILITY
+              level: 3
+      godbook1:
+        chance: 0.0000120909
+        power5book:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            power5:
+              enchant: ARROW_DAMAGE
+              level: 5
+      godbook2:
+        chance: 0.0000120909
+        infinity:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            infinity:
+              enchant: ARROW_INFINITE
+              level: 1
+      godbook3:
+        chance: 0.0000120909
+        eff5:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            eff5:
+              enchant: DIG_SPEED
+              level: 5
+      godbook4:
+        chance: 0.0000120909
+        ub3:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            ub3:
+              enchant: DURABILITY
+              level: 3
+      godbook5:
+        chance: 0.0000120909
+        sharpness5:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            sharpness5:
+              enchant: DAMAGE_ALL
+              level: 5
+      godbook6:
+        chance: 0.0000120909
+        protection4:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            protection4:
+              enchant: PROTECTION_ENVIRONMENTAL
+              level: 4
+      godbook7:
+        chance: 0.0000110909
+        silktouch:
+          material: BOOK
+          amount: 1
+          stored_enchants:
+            silktouch:
+              enchant: SILK_TOUCH
+              level: 1
+      high1:
+        chance: 0.0.000037038
+        item:
+          material: DIAMOND_BARDING
+          amount: 1
+      high2:
+        chance: 0.0.000037037
+        item:
+          material: SPONGE
+          name: Bastion
+          lore:
+           - This bastion will protect you from grief
+           - It will also block pearls when they land
+           - As well as stop elytra
+          amount: 1
+      high3:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_PICKAXE
+          amount: 1
+      high4:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_AXE
+          amount: 1
+      high5:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_SPADE
+          amount: 1
+      high6:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_CHESTPLATE
+          amount: 1
+      high7:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_LEGGINGS
+          amount: 1
+      high8:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_HELMET
+          amount: 1
+      high9:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_BOOTS
+          amount: 1
+      high10:
+        chance: 0.0.000037037
+        item:
+          material: IRON_INGOT
+          amount: 64
+      high11:
+        chance: 0.0.000037037
+        item:
+          material: DIAMOND_BLOCK
+          amount: 1
+      high12:
+        chance: 0.0.000037037
+        creeper:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 50
+      high13:
+        chance: 0.0.000037037
+        creeper:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 54
+      high14:
+        chance: 0.0.000037037
+        skeleton:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 51
+      high15:
+        chance: 0.0.000037037
+        spider:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 52
+      high16:
+        chance: 0.0.000037037
+        blaze:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 61
+      high17:
+        chance: 0.0.000037037
+        ghast:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 56
+      high18:
+        chance: 0.0.000037037
+        guardian:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 68
+      high19:
+        chance: 0.0.000037037
+        magmacube:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 62
+      high20:
+        chance: 0.0.000037037
+        slime:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 55
+      high21:
+        chance: 0.0.000037037
+        witch:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 66
+      high22:
+        chance: 0.0.000037037
+        villager:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 120
+      high23:
+        chance: 0.0.000037037
+        cavespider:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 59
+      high24:
+        chance: 0.0.000037037
+        enderman:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 58
+      high25:
+        chance: 0.0.000037037
+        zombiepigman:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 57
+      high26:
+        chance: 0.0.000037037
+        item:
+          material: COAL
+          amount: 2048
+          durability: 1
+      high27:
+        chance: 0.000037037
+        item:
+          material: BEACON
+          amount: 1
+      mid1:
+        chance: 0.0029411764
+        item:
+          material: IRON_PICKAXE
+          amount: 1
+      mid2:
+        chance: 0.00029411764
+        item:
+          material: IRON_SPADE
+          amount: 1
+      mid3:
+        chance: 0.00029411764
+        item:
+          material: IRON_AXE
+          amount: 1
+      mid4:
+        chance: 0.00029411764
+        item:
+          material: IRON_SWORD
+          amount: 1
+      mid5:
+        chance: 0.00029411764
+        item:
+          material: NOTE_BLOCK
+          amount: 5
+      mid6:
+        chance: 0.00029411764
+        item:
+          material: DIAMOND
+          amount: 1
+      mid7:
+        chance: 0.00029411764
+        item:
+          material: EMERALD
+          amount: 1
+      mid8:
+        chance: 0.00029411764
+        item:
+          material: IRON_BLOCK
+          amount: 1
+      mid9:
+        chance: 0.00029411764
+        item:
+          material: REDSTONE_BLOCK
+          amount: 1
+      mid10:
+        chance: 0.00029411764
+        item:
+          material: LAPIS_BLOCK
+          amount: 1
+      mid11:
+        chance: 0.000029411766
+        item:
+          material: GOLD_RECORD
+          amount: 1
+      mid12:
+        chance: 0.000029411764
+        item:
+          material: GREEN_RECORD
+          amount: 1
+      mid13:
+        chance: 0.000029411764
+        item:
+          material: RECORD_3
+          amount: 1
+      mid14:
+        chance: 0.000029411764
+        item:
+          material: RECORD_4
+          amount: 1
+      mid15:
+        chance: 0.000029411764
+        item:
+          material: RECORD_5
+          amount: 1
+      mid16:
+        chance: 0.000029411764
+        item:
+          material: RECORD_6
+          amount: 1
+      mid17:
+        chance: 0.000029411764
+        item:
+          material: RECORD_7
+          amount: 1
+      mid18:
+        chance: 0.000029411764
+        item:
+          material: RECORD_8
+          amount: 1
+      mid19:
+        chance: 0.000029411764
+        item:
+          material: RECORD_9
+          amount: 1
+      mid20:
+        chance: 0.000029411764
+        item:
+          material: RECORD_10
+          amount: 64
+      mid21:
+        chance: 0.000029411764
+        item:
+          material: RECORD_11
+          amount: 1
+      mid22:
+        chance: 0.000029411764
+        item:
+          material: RECORD_12
+          amount: 1
+      mid23:
+        chance: 0.00062352939
+        item:
+          material: MINECART
+          amount: 1
+      mid24:
+        chance: 0.00029411764
+        mooshroom:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 96
+      mid25:
+        chance: 0.00029411764
+        horse:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 100
+      mid26:
+        chance: 0.00029411764
+        rabbit:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 101
+      mid27:
+        chance: 0.00029411764
+        ocelot:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 98
+      mid28:
+        chance: 0.00029411764
+        squid:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 94
+      mid29:
+        chance: 0.00029411764
+        wolf:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 95
+      mid30:
+        chance: 0.00029411764
+        item:
+          material: IRON_BARDING
+          amount: 1
+      mid31:
+        chance: 0.00029411764
+        item:
+          material: BUCKET
+          amount: 1
+      mid32:
+        chance: 0.00029411764
+        item:
+          material: PRISMARINE_SHARD
+          amount: 5
+      mid33:
+        chance: 0.00029411788
+        item:
+          material: PRISMARINE_CRYSTALS
+          amount: 3
+      mid34:
+        chance: 0.00029411764
+        item:
+          material: JUKEBOX
+          amount: 1
+      low1:
+        chance: 0.0069446
+        item:
+          material: RAILS
+          amount: 1
+      low2:
+        chance: 0.00694444
+        item:
+          material: STONE_PICKAXE
+          amount: 1
+      low3:
+        chance: 0.00694444
+        item:
+          material: STONE_SPADE
+          amount: 1
+      low4:
+        chance: 0.00694444
+        item:
+          material: STONE_AXE
+          amount: 1
+      low5:
+        chance: 0.00694444
+        item:
+          material: STONE_HOE
+          amount: 1
+      low6:
+        chance: 0.00694444
+        item:
+          material: IRON_INGOT
+          amount: 1
+      low7:
+        chance: 0.00694444
+        item:
+          material: REDSTONE
+          amount: 1
+      low8:
+        chance: 0.00694444
+        item:
+          material: PACKED_ICE
+          amount: 1
+      low9:
+        chance: 0.00694444
+        item:
+          material: MELON_SEEDS
+          amount: 1
+      low10:
+        chance: 0.00694444
+        item:
+          material: PUMPKIN_SEEDS
+          amount: 1
+      low11:
+        chance: 0.00694444
+        item:
+          material: BEETROOT_SEEDS
+          amount: 1
+      low12:
+        chance: 0.00694444
+        item:
+          material: CARROT_ITEM
+          amount: 1
+      low13:
+        chance: 0.00694444
+        item:
+          material: POTATO_ITEM
+          amount: 1
+      low14:
+        chance: 0.00694444
+        item:
+          material: SNOW_BALL
+          amount: 16
+      low15:
+        chance: 0.00694444
+        item:
+          material: LEATHER_HELMET
+          amount: 1
+      low16:
+        chance: 0.00694444
+        item:
+          material: LEATHER_CHESTPLATE
+          amount: 1
+      low17:
+        chance: 0.00694444
+        item:
+          material: LEATHER_LEGGINGS
+          amount: 1
+      low18:
+        chance: 0.00694444
+        item:
+          material: LEATHER_BOOTS
+          amount: 1
+      low19:
+        chance: 0.00694444
+        item:
+          material: SAPLING
+          amount: 1
+          durability: 0
+      low20:
+        chance: 0.00694444
+        item:
+          material: SAPLING
+          amount: 1
+          durability: 1
+      low21:
+        chance: 0.00694444
+        item:
+          material: SAPLING
+          amount: 1
+          durability: 2
+      low22:
+        chance: 0.00694444
+        item:
+          material: SAPLING
+          amount: 1
+          durability: 3
+      low23:
+        chance: 0.00694444
+        item:
+          material: SAPLING
+          amount: 1
+          durability: 4
+      low24:
+        chance: 0.00694444
+        item:
+          material: SAPLING
+          amount: 1
+          durability: 5
+      low25:
+        chance: 0.00694444
+        item:
+          material: DEAD_BUSH
+          amount: 1
+          durability: 0
+      low26:
+        chance: 0.00694444
+        item:
+          material: DEAD_BUSH
+          amount: 1
+          durability: 1
+      low27:
+        chance: 0.00694444
+        item:
+          material: DEAD_BUSH
+          amount: 1
+          durability: 2
+      low28:
+        chance: 0.00694444
+        item:
+          material: RED_MUSHROOM
+          amount: 1
+      low29:
+        chance: 0.00694444
+        item:
+          material: BROWN_MUSHROOM
+          amount: 1
+      low30:
+        chance: 0.00694444
+        item:
+          material: CLAY
+          amount: 1
+      low31:
+        chance: 0.00694444
+        item:
+          material: FISHING_ROD
+          amount: 1
+      low32:
+        chance: 0.00694444
+        pig:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 90
+      low33:
+        chance: 0.00694444
+        sheep:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 91
+      low34:
+        chance: 0.00694444
+        cow:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 92
+      low35:
+        chance: 0.00694444
+        chicken:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 93
+      low36:
+        chance: 0.00694444
+        item:
+          material: BONE
+          amount: 1
+      garbage1:
+        chance: 0.04926
+        item:
+          material: FLINT
+          amount: 1
+      garbage2:
+        chance: 0.04926
+        item:
+          material: DIRT
+          amount: 1
+      garbage3:
+        chance: 0.04926
+        item:
+          material: GRAVEL
+          amount: 1
+      garbage4:
+        chance: 0.04926
+        item:
+          material: COBBLESTONE
+          amount: 1
+      garbage5:
+        chance: 0.04926
+        item:
+          material: ROTTEN_FLESH 
+          amount: 1
+      garbage6:
+        chance: 0.04926
+        item:
+          material: GLASS_BOTTLE
+          amount: 1
+      garbage7:
+        chance: 0.04926
+        item:
+          material: STONE
+          amount: 1
+          durability: 1
+      garbage8:
+        chance: 0.04926
+        item:
+          material: STONE
+          amount: 1
+          durability: 3
+      garbage9:
+        chance: 0.04926
+        item:
+          material: STONE
+          amount: 1
+          durability: 5
+      garbage10:
+        chance: 0.04926
+        item:
+          material: LOG
+          amount: 1
+          durability: 0
+      garbage11:
+        chance: 0.04926
+        item:
+          material: LOG
+          amount: 1
+          durability: 1
+      garbage12:
+        chance: 0.04926
+        item:
+          material: LOG
+          amount: 1
+          durability: 2
+      garbage13:
+        chance: 0.04926
+        item:
+          material: LOG
+          amount: 1
+          durability: 3
+      garbage14:
+        chance: 0.04926
+        item:
+          material: LOG_2
+          amount: 1
+          durability: 0
+      garbage15:
+        chance: 0.04926
+        item:
+          material: LOG_2
+          amount: 1
+          durability: 1
