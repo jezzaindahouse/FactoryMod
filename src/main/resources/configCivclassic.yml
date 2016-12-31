@@ -2401,6 +2401,7 @@ recipes:
       fossil:
         material: PRISMARINE_SHARD
         amount: 1
+        name: §3Fossil
         lore:
           - Crack me in a factory for a prize!
     outputs:
@@ -2857,8 +2858,9 @@ recipes:
         jukebox:
           material: JUKEBOX
           amount: 1
-      cobblestone:
+      dirt:
         chance: 0.9889
-        cobblestone:
-          material: COBBLESTONE
+        dirt:
+          material: DIRT
           amount: 1
+          name: Dirt!
