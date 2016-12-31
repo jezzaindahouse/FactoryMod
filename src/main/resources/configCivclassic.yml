@@ -192,6 +192,7 @@ factories:
      - smelt_redstone_advanced
      - smelt_lapis_advanced
      - make_bastion_basic
+     - crack_fossil
      - repair_diamond_factory
   advanced_smelter:
     type: FCCUPGRADE
@@ -201,7 +202,6 @@ factories:
      - smelt_stone_advanced
      - smelt_glass_advanced
      - smelt_netherrack_advanced
-     - crack_fossil
      - repair_advanced_smelter
   diamond_armor:
     type: FCCUPGRADE
